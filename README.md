@@ -1,2 +1,2 @@
 # algo-toolbox
-My repository of Algorithms used in Computer Science
+Algorithms used in Computer Science
