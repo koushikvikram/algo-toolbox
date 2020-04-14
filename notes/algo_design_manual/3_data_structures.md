@@ -1,13 +1,13 @@
 # Data Structures
-> * Contiguous vs Linked Data Structures
-> * Stacks and Queues
-> * Dictionaries
-> * Binary Search Trees
-> * Priority Queues
-> * (War Story) Stripping Triangulations
-> * Hashing and Strings
-> * Specialized Data Structures
-> * (War Story) String 'em Up
+> * [Contiguous vs Linked Data Structures](#1-contiguous-vs-linked-data-structures)
+> * [Stacks and Queues](#2-stacks-and-queues)
+> * [Dictionaries](#3-dictionaries)
+> * [Binary Search Trees](#4-binary-search-trees)
+> * [Priority Queues](#5-priority-queues)
+> * [(War Story) Stripping Triangulations](#6-war-story-stripping-triangulations)
+> * [Hashing and Strings](#7-hashing-and-strings)
+> * [Specialized Data Structures](#8-specialized-data-structures)
+> * [(War Story) String 'em Up](#9-war-story-string-em-up)
 
 <br>
 A data structure is an implementation of an abstract data type.
