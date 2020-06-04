@@ -26,11 +26,11 @@ For an **undirected graph**, adjacency matrix is **symmetric**.
 **Adjacency list:**
 
 ```python
-[ 'A': ['B', 'C'],
-  'B': ['A'],
-  'C': ['A', 'D', 'E'],
-  'D': ['C'],
-  'E': ['C'] ]
+{ 'A': {'B', 'C'},
+  'B': {'A'},
+  'C': {'A', 'D', 'E'},
+  'D': {'C'},
+  'E': {'C'} }
 ```
 
 Vertices in an adjacency list are not required to appear in any particular order, though it is often convenient to list them in increasing order. i.e. [B, C] and [C, B] mean the same
