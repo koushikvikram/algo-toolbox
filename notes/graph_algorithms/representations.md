@@ -10,7 +10,7 @@ Example graph:
                     
 **Edge list representation:**
 ```python
-[ [A, B], [A, C], [C, D], [D, E] ]
+[ ['A', 'B'], ['A', 'C'], ['C', 'D'], ['D', 'E'] ]
 ```
 
 **Adjacency matrix representation:**
@@ -26,11 +26,11 @@ For an **undirected graph**, adjacency matrix is **symmetric**.
 **Adjacency list:**
 
 ```python
-[ [B, C],
-  [A],
-  [A, D, E],
-  [C],
-  [C] ]
+[ 'A': ['B', 'C'],
+  'B': ['A'],
+  'C': ['A', 'D', 'E'],
+  'D': ['C'],
+  'E': ['C'] ]
 ```
 
 Vertices in an adjacency list are not required to appear in any particular order, though it is often convenient to list them in increasing order. i.e. [B, C] and [C, B] mean the same
