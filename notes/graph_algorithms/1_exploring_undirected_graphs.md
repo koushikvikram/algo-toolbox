@@ -3,8 +3,8 @@
 Topics:
 * [Exploring graphs](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#exploring-graphs)
     * [Basic Pseudocode](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#basic-idea-and-pseudocode)
-    * [Refined Pseudocode]()
-    * [Code - Depth First Exploration]()
+    * [Refined Pseudocode](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#refining-the-pseudocode)
+    * [Python Code - Depth First Exploration](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#python-code)
 * [Connectivity](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#connectivity)
 * [Previsit and Postvisit orderings](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#previsit-and-postvisit-orderings)
 
