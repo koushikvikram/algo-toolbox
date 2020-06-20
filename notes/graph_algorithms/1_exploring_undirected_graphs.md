@@ -105,18 +105,18 @@ This is because we use a "for loop" to iterate over all neighbors of 'v' and an 
 
 ```python
 def dfe_recursive(graph, vertex):
-    visited = dict()
+    visited = []
     
     def explore(vertex):
         # mark vertex as visited
-        visited[vertex] = True
+        visited.append(vertex)
         # explore neighbors that haven't been visited
         for neighbor in graph[vertex]:
             if neighbor not in visited:
                 explore(neighbor)
     
     explore(vertex)
-    return set(visited.keys())
+    return visited
 ```
 
 ```python
@@ -158,3 +158,21 @@ Example graph (G):
                     / \        / \
                    D   E      Y---Z
 
+```python
+def dfs_explore_all_recursive(graph):
+    visited = []
+    
+    def explore(vertex):
+        # mark vertex as visited
+        visited.append(vertex)
+        # explore neighbors that haven't been visited
+        for neighbor in graph[vertex]:
+            if neighbor not in visited:
+                explore(neighbor)
+    
+    for vertex in graph:
+        if vertex not in visited:
+            explore(vertex)
+    
+    return visited
+```
