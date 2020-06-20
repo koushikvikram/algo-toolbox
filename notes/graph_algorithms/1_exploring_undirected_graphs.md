@@ -22,7 +22,7 @@ Algorithms for exploring graphs.
 * Figure out whether or not one vertex of a graph is **"reachable"** from another
 
 
-    A "path" in a graph G is a sequence of vertices [v_0, v_1, ..., v_n] such that for all i,  (v_i, v_i+1) is an "edge" of G. 
+        A "path" in a graph G is a sequence of vertices [v_0, v_1, ..., v_n] such that for all i,  (v_i, v_i+1) is an "edge" of G. 
 
 
 Example: 
@@ -30,10 +30,10 @@ Example:
 - [A, C, D] is a path in G, where (A, C), (C, D) are edges of G. 
 
 
-    Reachability (from a particular vertex) - Formal Description
-    -----------------------------------------------------------------------------
-    Inputs: G, s    where G -> Graph, s -> vertex of interest
-    Output: {v_1, v_2, ..., v_n} belonging to G, such that there is a "path" from s to v_i
+        Reachability (from a particular vertex) - Formal Description
+        -------------------------------------------------------------------------
+        Inputs: G, s    where G -> Graph, s -> vertex of interest
+        Output: {v_1, v_2, ..., v_n} belonging to G, such that there is a "path" from s to v_i
 
 Example: 
 - Input: [(A, B), (A, C), (C, D), (D, E)], C
