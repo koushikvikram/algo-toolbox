@@ -5,6 +5,7 @@ Topics:
     * [Basic Pseudocode](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#basic-idea-and-pseudocode)
     * [Refined Pseudocode](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#refining-the-pseudocode)
     * [Python Code - Depth First Exploration](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#python-code)
+    * [Reach all vertices](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#reach-all-vertices)
 * [Connectivity](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#connectivity)
 * [Previsit and Postvisit orderings](https://github.com/koushikvikram/algo-toolbox/blob/master/notes/graph_algorithms/1_exploring_undirected_graphs.md#previsit-and-postvisit-orderings)
 
@@ -40,7 +41,7 @@ Example:
 
 Example: 
 - Input: [(A, B), (A, C), (C, D), (D, E)], C
-- Output: [A, B, C, D, E]
+- Output: [C, A, B, D, E]
 
 ### The "Explore" algorithm
 
@@ -101,3 +102,46 @@ Simplified explanation:
 This is because we use a "for loop" to iterate over all neighbors of 'v' and an **adjacency list** can give us the **list of neighbors** in **O(deg)** time.
 
 #### Python Code
+
+```python
+def dfs_recursive(graph, vertex, visited=[]):
+    # mark vertex as visited
+    visited += [vertex]  
+    # explore neighbors that haven't been visited
+    for neighbor in graph[vertex]:
+        if neighbor not in visited:
+            visited = dfs_recursive(graph, neighbor, visited)
+    return visited
+```
+
+```python
+def dfs_iterative(graph, start):
+    stack, visited = [start], []
+    while stack:
+        vertex = stack.pop()
+        if vertex in visited:
+            continue
+        visited.append(vertex)
+        for neighbor in graph[vertex]:
+            stack.append(neighbor)
+    return visited
+```
+
+#### Result
+
+> Theorem: If **all vertices start unvisited**, Explore(v) marks as visited exactly the vertices **reachable** from v.
+        
+#### Proof
+
+1. Explore(v) only explores things reachable from 'v'.
+2. Vertex 'w' is not marked as visited unless explored.
+3. If 'w' gets explored, all of its neighbors also get explored.
+4. Assume 'u' is reachable from 'v' by path.
+    - u --> z --> w --> ... -> v   
+5. Assume 'w' is the furthest along the path explored.
+6. Then, we must explore the next item. 
+    - because, going by point 3, if 'w' gets explored, all of its neighbors also get explored until we reach 'u', which is the end of the path.
+   
+   
+### Reach all vertices
+
