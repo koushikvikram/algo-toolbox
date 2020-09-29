@@ -150,6 +150,8 @@ def dfe_iterative(graph, start):
    
 ### Reach all vertices
 
+Sometimes, you want to find **all vertices** of G, not just those reachable from v.
+
 Example graph (G):
 
                    A            J---K
@@ -158,8 +160,21 @@ Example graph (G):
                     / \        / \
                    D   E      Y---Z
 
+**Pseudocode**
+
+        DFS(G)
+        -------------------
+        for all v in G:
+            mark v as unvisited
+        for all v in G:
+            if not visited(v):
+                Explore(v)
+
+#### Python code
+
 ```python
 def dfs_explore_all_recursive(graph):
+    # mark all vertices as unvisited
     visited = []
     
     def explore(vertex):
@@ -170,9 +185,11 @@ def dfs_explore_all_recursive(graph):
             if neighbor not in visited:
                 explore(neighbor)
     
+    # explore all unvisited vertices in the graph in depth first order
     for vertex in graph:
         if vertex not in visited:
             explore(vertex)
     
     return visited
 ```
+
