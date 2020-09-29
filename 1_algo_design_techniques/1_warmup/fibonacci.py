@@ -62,4 +62,5 @@ def fib_last_digit(n):
         previous, current = current, (previous+current)%10
     return current
 
+
 print("fib_last_digit({}): {}".format(input_number, fib_last_digit(input_number)))
